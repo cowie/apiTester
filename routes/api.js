@@ -11,7 +11,7 @@ var SFDCPASSWORD = process.env.SFDCPASSWORD;
 var JSFORCELOGINURL = process.env.JSFORCELOGINURL;
 
 var conn = new jsforce.Connection({
-    loginUrl: JSFORCELOGINURL;
+    loginUrl: JSFORCELOGINURL
 });
 
 
