@@ -19,7 +19,7 @@ router.get('/objects/create/:objectName', function(req, res, next) {
     var objectName = req.params.objectName;
     console.log(`request to create ${objectName}`);
     conn.login(SFDCUSERNAME, SFDCPASSWORD, (err, lres)=>{
-        if(err) {console.error(err);}
+        if(err) {console.error(err); res.send(200);}
         else{
             var startTime = moment();
             conn.sobject(objectName).create(req.query, function(err,ret){
