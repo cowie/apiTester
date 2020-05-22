@@ -36,3 +36,5 @@ router.get('/objects/create/:objectName', function(req, res, next) {
 router.get('/events/create/:objectName', function(req, res, next) {
 
 });
+
+module.exports=router;
