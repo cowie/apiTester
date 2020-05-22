@@ -2,12 +2,18 @@ var express = require('express');
 var router = express.Router();
 
 var jsforce = require('jsforce');
-var conn = new jsforce.Connection();
+
 
 var moment = require('moment');
 
 var SFDCUSERNAME = process.env.SFDCUSERNAME;
 var SFDCPASSWORD = process.env.SFDCPASSWORD;
+var JSFORCELOGINURL = process.env.JSFORCELOGINURL;
+
+var conn = new jsforce.Connection({
+    loginUrl: JSFORCELOGINURL;
+});
+
 
 router.get('/objects/create/:objectName', function(req, res, next) {
     var objectName = req.params.objectName;
