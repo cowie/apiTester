@@ -15,7 +15,7 @@ var conn = new jsforce.Connection({
 });
 
 
-router.get('/objects/create/:objectName', function(req, res, next) {
+router.get('/create/:objectName', function(req, res, next) {
     var objectName = req.params.objectName;
     console.log(`request to create ${objectName}`);
     conn.login(SFDCUSERNAME, SFDCPASSWORD, (err, lres)=>{
@@ -33,8 +33,5 @@ router.get('/objects/create/:objectName', function(req, res, next) {
     });
 });
 
-router.get('/events/create/:objectName', function(req, res, next) {
-
-});
 
 module.exports=router;
