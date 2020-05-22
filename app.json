@@ -1,0 +1,30 @@
+{
+    "name": "CDGsScrubAPITester",
+    "description": "A flexible app to do small scale inserts with REST using Loader.io",
+    "repository": "https://github.com/cowie/apiTester",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "keywords": ["node", "express", "static"],
+    "env": {
+        "loaderKey" : {
+            "description" : "Configure loader.io after this to get",
+            "value" : "You wont have this yet!"
+        },
+        "SFDCUSERNAME" : {
+            "description" : "Trust is everything - your SFDC username",
+            "value" : "yo name @ something . something"
+        },
+        "SFDCPASSWORD" : {
+            "description" : "Yeah but how we know you you? Password + Token",
+            "value" : "passwordToken"
+        },
+        "JSFORCELOGINURL" :{
+            "description" :"for PROD, change to https://login.salesforce.com, for SB leave as is",
+            "value" : "https://test.salesforce.com"
+        }
+    },
+    "addons" : [
+        {
+            "plan": "loaderio:basic"
+        }
+    ]
+  }
